@@ -59,10 +59,10 @@ Update-Database
 ![Admin](Screenshots/Admin/admin.png)
 
 ### 🔹 Employee Dashboard
-![Employee Dashboard](Screenshots/Employeedashboard/dashboard.png)
+![Employee Dashboard](Screenshots/EmployeeDashboard/dashboard.png)
 
 ### 🔹 Attendance Management
-![Attendance](Screenshots/Attendnence/attendnence.png)
+![Attendance](Screenshots/Attendannce/attendannce.png)
 
 ### 🔹 Leave Requests
 ![Leave Requests](Screenshots/LeaveRequests/leaverequests.png)
