@@ -53,28 +53,28 @@ Update-Database
 ## 📸 Screenshots
 
 ### 🔹 Startup Page
-![Startup](Screenshots/startup/startup.png)
+![Startup](Screenshots/Startup/startup.png)
 
 ### 🔹 Admin Dashboard
-![Admin](Screenshots/admin/admin.png)
+![Admin](Screenshots/Admin/admin.png)
 
 ### 🔹 Employee Dashboard
-![Employee Dashboard](Screenshots/employeedashboard/employeedashboard.png)
+![Employee Dashboard](Screenshots/Employeedashboard/dashboard.png)
 
 ### 🔹 Attendance Management
-![Attendance](Screenshots/attendnence/attendnence.png)
+![Attendance](Screenshots/Attendnence/attendnence.png)
 
 ### 🔹 Leave Requests
-![Leave Requests](Screenshots/leaverequests/leaverequests.png)
+![Leave Requests](Screenshots/LeaveRequests/leaverequests.png)
 
 ### 🔹 Salaries Section
-![Salaries](Screenshots/salaries/salaries.png)
+![Salaries](Screenshots/Salaries/salary.png)
 
 ### 🔹 Signup Page
-![Signup](Screenshots/signup/signup.png)
+![Signup](Screenshots/Signup/signup.png)
 
 ### 🔹 Settings Panel
-![Settings](Screenshots/setting/setting.png)
+![Settings](Screenshots/Setting/setting.png)
 
 ---
 
