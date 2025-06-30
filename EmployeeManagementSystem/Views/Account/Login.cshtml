@@ -1,0 +1,223 @@
+﻿@model EmployeeManagementSystem.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutStartup.cshtml";
+}
+
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h2>Welcome Back</h2>
+            <p>Please login to your account</p>
+        </div>
+
+        <form asp-action="Login" method="post" class="auth-form">
+            <div class="form-group">
+                <label asp-for="Email">Email Address</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input asp-for="Email" type="email" class="form-control" placeholder="Enter your email">
+                </div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password">
+                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="text-primary">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 auth-btn">
+                <span class="btn-text">Login</span>
+                <span class="btn-loader d-none">
+                    <span class="spinner-border spinner-border-sm" role="status"></span>
+                </span>
+            </button>
+
+            <div class="auth-footer text-center mt-3">
+                Don't have an account? <a asp-action="Register" class="text-primary">Sign up</a>
+            </div>
+        </form>
+
+        <div class="auth-divider">
+            <span>OR</span>
+        </div>
+
+        <div class="social-login">
+            <button class="btn btn-outline-primary w-100 mb-2">
+                <i class="fab fa-google me-2"></i> Continue with Google
+            </button>
+            <button class="btn btn-outline-primary w-100">
+                <i class="fab fa-microsoft me-2"></i> Continue with Microsoft
+            </button>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .auth-container {
+            display: flex;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #003366, #004080, #0059b3, #0073e6);
+            padding: 20px;
+        }
+
+        .auth-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+            .auth-header h2 {
+                font-weight: 700;
+                color: #003366;
+                margin-bottom: 10px;
+            }
+
+            .auth-header p {
+                color: #6c757d;
+            }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                font-weight: 500;
+                margin-bottom: 8px;
+                display: block;
+            }
+
+        .input-group-text {
+            background-color: #f8f9fa;
+            border-right: none;
+        }
+
+        .form-control {
+            border-left: none;
+            padding: 12px 15px;
+            height: auto;
+        }
+
+            .form-control:focus {
+                box-shadow: none;
+                border-color: #ced4da;
+            }
+
+        .toggle-password {
+            border-left: none;
+        }
+
+        .auth-btn {
+            padding: 12px;
+            font-weight: 600;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+            .auth-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 86, 179, 0.3);
+            }
+
+        .auth-footer {
+            color: #6c757d;
+        }
+
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+            color: #6c757d;
+        }
+
+            .auth-divider::before,
+            .auth-divider::after {
+                content: "";
+                flex: 1;
+                border-bottom: 1px solid #dee2e6;
+            }
+
+            .auth-divider span {
+                padding: 0 15px;
+            }
+
+        .social-login .btn {
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .text-primary {
+            color: #0073e6 !important;
+        }
+
+        .btn-outline-primary {
+            color: #0073e6;
+            border-color: #0073e6;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: #0073e6;
+                color: #fff;
+            }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Toggle password visibility
+            $('.toggle-password').click(function() {
+                const input = $(this).parent().find('input');
+                const icon = $(this).find('i');
+
+                if (input.attr('type') === 'password') {
+                    input.attr('type', 'text');
+                    icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    input.attr('type', 'password');
+                    icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            });
+
+            // Form submission loader
+            $('.auth-form').submit(function() {
+                $(this).find('.btn-text').addClass('d-none');
+                $(this).find('.btn-loader').removeClass('d-none');
+            });
+        });
+    </script>
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

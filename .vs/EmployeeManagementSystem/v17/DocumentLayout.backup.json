@@ -1,0 +1,350 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\shared\\_layoutdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\shared\\_layoutdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\settingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\salaries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\salaries.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\mark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\leaverequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\leaverequests.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\employees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\employees.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\employeeinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\employeeinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\editsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\editsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\editmark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\editmark.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\editleave.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\editleave.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\attendance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\addsalary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\addsalary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\employee\\addleave.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\employee\\addleave.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\filters\\authorizeroleattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\filters\\authorizeroleattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\views\\account\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\views\\account\\editprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|c:\\users\\hasna\\source\\repos\\employeemanagementsystem\\employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E983F326-934C-4F12-BFA9-1DB100B9DF37}|EmployeeManagementSystem\\EmployeeManagementSystem.csproj|solutionrelative:employeemanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 18,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Models\\User.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T20:32:06.54Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SettingsController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\SettingsController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\SettingsController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\SettingsController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\SettingsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T19:56:51.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Salaries.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Salaries.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\Salaries.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Salaries.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\Salaries.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:42.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LeaveRequests.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\LeaveRequests.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\LeaveRequests.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\LeaveRequests.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\LeaveRequests.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:40.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EditSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EditSuccess.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\EditSuccess.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EditSuccess.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\EditSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:38.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditMark.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EditMark.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\EditMark.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EditMark.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\EditMark.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:34.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EditLeave.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EditLeave.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\EditLeave.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EditLeave.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\EditLeave.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:33.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:32.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddSalary.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\AddSalary.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\AddSalary.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\AddSalary.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\AddSalary.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:30.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddLeave.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\AddLeave.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\AddLeave.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\AddLeave.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\AddLeave.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:29.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Mark.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Mark.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\Mark.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Mark.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\Mark.cshtml",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAAIcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:51:00.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Attendance.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Attendance.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\Attendance.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Attendance.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\Attendance.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T19:50:56.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAAAH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T03:08:30.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthorizeRoleAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Filters\\AuthorizeRoleAttribute.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Filters\\AuthorizeRoleAttribute.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Filters\\AuthorizeRoleAttribute.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Filters\\AuthorizeRoleAttribute.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T03:07:37.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EditProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Account\\EditProfile.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Account\\EditProfile.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Account\\EditProfile.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Account\\EditProfile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-28T03:02:38.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeInfo.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EmployeeInfo.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\EmployeeInfo.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\EmployeeInfo.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\EmployeeInfo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T04:04:41.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Employees.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Employees.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Employee\\Employees.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Employee\\Employees.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Employee\\Employees.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-27T03:57:47.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_LayoutDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Shared\\_LayoutDashboard.cshtml",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Views\\Shared\\_LayoutDashboard.cshtml",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Views\\Shared\\_LayoutDashboard.cshtml",
+              "RelativeToolTip": "EmployeeManagementSystem\\Views\\Shared\\_LayoutDashboard.cshtml",
+              "ViewState": "AgIAAFsBAAAAAAAAAAAAAGEBAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T20:11:41.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T03:13:33.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagementSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\hasna\\source\\repos\\EmployeeManagementSystem\\EmployeeManagementSystem\\Program.cs",
+              "RelativeToolTip": "EmployeeManagementSystem\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAtwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T03:02:40.327Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

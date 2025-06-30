@@ -1,0 +1,207 @@
+﻿@model EmployeeManagementSystem.Models.Employee
+
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<div class="container-fluid px-4 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+            <div class="card shadow-sm border-0 rounded-lg">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0 text-center"><i class="fas fa-user-plus me-2"></i>Add New Employee</h3>
+                </div>
+
+                <div class="card-body p-4">
+                    <form asp-action="Add" method="post" enctype="multipart/form-data" class="needs-validation">
+                        <div class="row g-3">
+                            <!-- Personal Information Section -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="FullName" class="form-control" placeholder="Full Name" maxlength="100" />
+                                    <label asp-for="FullName"></label>
+                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Email" class="form-control" placeholder="Email" type="email" maxlength="100" />
+                                    <label asp-for="Email"></label>
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Employment Information Section -->
+                            
+
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Position" class="form-control" placeholder="Position" maxlength="50" />
+                                    <label asp-for="Position"></label>
+                                    <span asp-validation-for="Position" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information Section -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="Phone" class="form-control" placeholder="Phone" maxlength="12" />
+                                    <label>Phone Number</label>
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="CNIC" class="form-control" placeholder="CNIC" maxlength="15" />
+                                    <label>CNIC</label>
+                                    <span asp-validation-for="CNIC" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input asp-for="Address" class="form-control" placeholder="Address" maxlength="200" />
+                                    <label asp-for="Address"></label>
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="JoiningDate" class="form-control" type="date" placeholder="Joining Date" />
+                                    <label>Joining Date</label>
+                                    <span asp-validation-for="JoiningDate" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <!-- File Uploads Section -->
+                            <div class="col-md-6">
+                                <div class="file-upload-card">
+                                    <label class="form-label">Employee Photo</label>
+                                    <div class="file-upload-wrapper">
+                                        <input type="file" asp-for="ImageFile" class="form-control" id="imageUpload" accept="image/*" />
+                                        <label for="imageUpload" class="file-upload-label">
+                                            <i class="fas fa-cloud-upload-alt me-2"></i>
+                                            <span class="file-upload-text">Choose a file or drag it here</span>
+                                        </label>
+                                        <div class="file-preview mt-2 d-none" id="imagePreview"></div>
+                                    </div>
+                                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="file-upload-card">
+                                    <label class="form-label">Employee Resume</label>
+                                    <div class="file-upload-wrapper">
+                                        <input type="file" asp-for="ResumeFile" class="form-control" id="resumeUpload" accept=".pdf,.doc,.docx" />
+                                        <label for="resumeUpload" class="file-upload-label">
+                                            <i class="fas fa-cloud-upload-alt me-2"></i>
+                                            <span class="file-upload-text">Choose a file or drag it here</span>
+                                        </label>
+                                        <div class="file-info mt-2 d-none" id="resumeInfo"></div>
+                                    </div>
+                                    <span asp-validation-for="ResumeFile" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-user-plus me-2"></i>Add Employee
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        /* Your existing styles remain the same */
+        .text-danger {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // File upload preview functionality
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const preview = document.getElementById('imagePreview');
+            const file = e.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    preview.innerHTML = `<img src="${event.target.result}" alt="Preview" class="img-thumbnail">`;
+                    preview.classList.remove('d-none');
+                }
+
+                reader.readAsDataURL(file);
+            } else {
+                preview.classList.add('d-none');
+            }
+        });
+
+        // Resume file info display
+        document.getElementById('resumeUpload').addEventListener('change', function(e) {
+            const info = document.getElementById('resumeInfo');
+            const file = e.target.files[0];
+
+            if (file) {
+                const iconClass = file.name.endsWith('.pdf') ? 'fa-file-pdf text-danger' : 'fa-file-word text-primary';
+                info.innerHTML = `
+                    <div class="d-flex align-items-center">
+                        <i class="fas ${iconClass} me-2 fs-4"></i>
+                        <div>
+                            <p class="mb-0 fw-bold">${file.name}</p>
+                            <small class="text-muted">${(file.size / 1024).toFixed(2)} KB</small>
+                        </div>
+                    </div>
+                `;
+                info.classList.remove('d-none');
+            } else {
+                info.classList.add('d-none');
+            }
+        });
+
+        // Format phone number as user types
+        document.getElementById('Phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 4) {
+                value = value.substring(0, 4) + '-' + value.substring(4);
+            }
+            if (value.length > 12) {
+                value = value.substring(0, 12);
+            }
+            e.target.value = value;
+        });
+
+        // Format CNIC as user types
+        document.getElementById('CNIC').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 5) {
+                value = value.substring(0, 5) + '-' + value.substring(5);
+            }
+            if (value.length > 13) {
+                value = value.substring(0, 13) + '-' + value.substring(13);
+            }
+            if (value.length > 15) {
+                value = value.substring(0, 15);
+            }
+            e.target.value = value;
+        });
+
+        // Remove the automatic validation script
+        // The _ValidationScriptsPartial will handle validation on submit
+    </script>
+}

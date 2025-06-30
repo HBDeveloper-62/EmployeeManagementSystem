@@ -1,0 +1,141 @@
+﻿@model EmployeeManagementSystem.Models.OrganizationInfo
+@{
+    ViewData["Title"] = "Organization Information";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="organization-info-page">
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2 class="page-title">
+                        <i class="fas fa-building me-2"></i>Organization Information
+                    </h2>
+                    <a asp-action="EditOrganizationInfo" asp-controller="Settings" class="btn btn-primary">
+                        <i class="fas fa-edit me-2"></i>Edit Information
+                    </a>
+                </div>
+                <hr class="mt-2">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-white border-bottom-0 pb-0">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-image me-2 text-primary"></i>Organization Logo
+                        </h5>
+                    </div>
+                    <div class="card-body text-center">
+                        @if (!string.IsNullOrEmpty(Model.LogoPath))
+                        {
+                            <img src="@Model.LogoPath" alt="Organization Logo" class="img-fluid rounded" style="max-height: 180px;">
+                        }
+                        else
+                        {
+                            <div class="no-logo-placeholder bg-light rounded d-flex align-items-center justify-content-center" style="height: 180px;">
+                                <i class="fas fa-building fa-4x text-muted"></i>
+                            </div>
+                            <p class="text-muted mt-2">No logo uploaded</p>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white border-bottom-0">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-info-circle me-2 text-primary"></i>Details
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th width="30%" class="text-muted">Organization Name</th>
+                                        <td>@Model.OrganizationName</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted">Email Address</th>
+                                        <td>
+                                            <a href="mailto:@Model.Email" class="text-decoration-none">
+                                                @Model.Email <i class="fas fa-envelope ms-2 text-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted">Phone Number</th>
+                                        <td>
+                                            <a href="tel:@Model.Phone" class="text-decoration-none">
+                                                @Model.Phone <i class="fas fa-phone ms-2 text-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted">Address</th>
+                                        <td>
+                                            <a href="https://maps.google.com/?q=@Model.Address" target="_blank" class="text-decoration-none">
+                                                @Model.Address <i class="fas fa-map-marker-alt ms-2 text-primary"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .organization-info-page {
+        padding: 2rem 0;
+    }
+
+    .page-title {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.75rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+        }
+
+    .card-title {
+        font-weight: 600;
+        color: #2c3e50;
+    }
+
+    .table th {
+        font-weight: 500;
+    }
+
+    .no-logo-placeholder {
+        background-color: #f8f9fa;
+        border: 1px dashed #dee2e6;
+    }
+
+    @@media (max-width: 768px) {
+        .organization-info-page {
+            padding: 1rem 0;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>

@@ -1,0 +1,210 @@
+﻿@model EmployeeManagementSystem.Models.LeaveRequest
+@{
+    ViewData["Title"] = "Add Leave";
+    var employees = ViewBag.Employees as List<EmployeeManagementSystem.Models.Employee>;
+}
+
+<div class="container-fluid leave-request-page">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="page-title">
+                    <i class="fas fa-calendar-plus me-2"></i>Add Leave Request
+                </h2>
+                <a href="~/Employee/LeaveRequests" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left me-2"></i>Back to List
+                </a>
+            </div>
+            <hr class="mt-2">
+        </div>
+    </div>
+
+    <!-- Success Message (Initially Hidden) -->
+    <div id="successAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+        <div class="d-flex align-items-center">
+            <i class="fas fa-check-circle me-3 fs-4"></i>
+            <div>
+                <h5 class="alert-heading mb-1">Leave request added successfully!</h5>
+                <p class="mb-0">Redirecting back to leave requests in <span id="countdown">3</span> seconds...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leave Request Form -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <form id="leaveForm" asp-action="AddLeave" method="post">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="EmployeeId" class="form-label">
+                            <i class="fas fa-user me-1 text-muted"></i> Employee
+                        </label>
+                        <select asp-for="EmployeeId" class="form-select" required>
+                            <option value="">-- Select Employee --</option>
+                            @foreach (var emp in employees)
+                            {
+                                <option value="@emp.Id">@emp.FullName</option>
+                            }
+                        </select>
+                        <span asp-validation-for="EmployeeId" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="LeaveType" class="form-label">
+                            <i class="fas fa-tag me-1 text-muted"></i> Leave Type
+                        </label>
+                        <select asp-for="LeaveType" class="form-select" required>
+                            <option value="">-- Select Type --</option>
+                            <option>Sick</option>
+                            <option>Casual</option>
+                            <option>Annual</option>
+                        </select>
+                        <span asp-validation-for="LeaveType" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="StartDate" class="form-label">
+                            <i class="fas fa-calendar-day me-1 text-muted"></i> Start Date
+                        </label>
+                        <input asp-for="StartDate" type="date" class="form-control" required />
+                        <span asp-validation-for="StartDate" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="EndDate" class="form-label">
+                            <i class="fas fa-calendar-day me-1 text-muted"></i> End Date
+                        </label>
+                        <input asp-for="EndDate" type="date" class="form-control" required />
+                        <span asp-validation-for="EndDate" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-12 mb-3">
+                        <label asp-for="Reason" class="form-label">
+                            <i class="fas fa-comment me-1 text-muted"></i> Reason
+                        </label>
+                        <textarea asp-for="Reason" class="form-control" rows="3" required></textarea>
+                        <span asp-validation-for="Reason" class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Status" class="form-label">
+                            <i class="fas fa-info-circle me-1 text-muted"></i> Status
+                        </label>
+                        <select asp-for="Status" class="form-select" required>
+                            <option value="">-- Select Status --</option>
+                            <option>Pending</option>
+                            <option>Approved</option>
+                            <option>Rejected</option>
+                        </select>
+                        <span asp-validation-for="Status" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-primary px-4">
+                        <i class="fas fa-save me-2"></i>Save Leave Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .leave-request-page {
+        padding: 2rem 0;
+    }
+
+    .page-title {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.75rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    .form-label {
+        font-weight: 500;
+        color: #495057;
+    }
+
+    #successAlert {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 400px;
+        z-index: 1000;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    @@media (max-width: 768px) {
+        .leave-request-page {
+            padding: 1rem 0;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+        }
+
+        #successAlert {
+            width: calc(100% - 40px);
+        }
+    }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.getElementById('leaveForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Submit form via AJAX
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    const successAlert = document.getElementById('successAlert');
+                    successAlert.classList.remove('d-none');
+
+                    // Hide the form
+                    document.querySelector('.card').style.opacity = '0.5';
+                    document.querySelector('.card').style.pointerEvents = 'none';
+
+                    // Start countdown
+                    let seconds = 3;
+                    const countdownElement = document.getElementById('countdown');
+                    const countdownInterval = setInterval(() => {
+                        seconds--;
+                        countdownElement.textContent = seconds;
+
+                        if (seconds <= 0) {
+                            clearInterval(countdownInterval);
+                            window.location.href = '/Employee/LeaveRequests';
+                        }
+                    }, 1000);
+                } else {
+                    alert('Error submitting leave request');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting leave request');
+            });
+        });
+
+        // Date validation
+        document.getElementById('StartDate').addEventListener('change', function() {
+            const endDate = document.getElementById('EndDate');
+            if (this.value && endDate.value && new Date(this.value) > new Date(endDate.value)) {
+                endDate.value = this.value;
+            }
+            endDate.min = this.value;
+        });
+    </script>
+}

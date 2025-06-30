@@ -1,0 +1,185 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "~/Views/Shared/_LayoutStartup.cshtml";
+}
+
+<div class="contact-page">
+    <section class="hero-section bg-light py-5">
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Get In Touch</h1>
+                    <p class="lead mb-4">We'd love to hear from you! Reach out for sales, support, or partnership inquiries.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#contact-form" class="btn btn-primary btn-lg px-4">
+                            <i class="fas fa-envelope me-2"></i>Send Message
+                        </a>
+                        <a href="#contact-info" class="btn btn-outline-primary btn-lg px-4">
+                            <i class="fas fa-map-marker-alt me-2"></i>Our Locations
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form" class="form-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0 rounded-3 overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="contact-image h-100" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-4 p-md-5">
+                                    <h2 class="mb-4">Send Us a Message</h2>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Your Name</label>
+                                            <input type="text" class="form-control" id="name" placeholder="John Smith">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="subject" class="form-label">Subject</label>
+                                            <select class="form-select" id="subject">
+                                                <option selected>Select a topic</option>
+                                                <option>Sales Inquiry</option>
+                                                <option>Technical Support</option>
+                                                <option>Partnership Opportunity</option>
+                                                <option>General Question</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">Message</label>
+                                            <textarea class="form-control" id="message" rows="4" placeholder="Your message here..."></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100 py-2">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-info" class="info-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Offices</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="office-card p-4 rounded-3 shadow-sm bg-white h-100">
+                        <div class="office-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h3>Headquarters</h3>
+                        <address class="mb-3">
+                            123 Tech Park Drive<br>
+                            Boston, MA 02110<br>
+                            United States
+                        </address>
+                        <div class="office-contact">
+                            <p class="mb-1"><i class="fas fa-phone me-2"></i> +1 (617) 555-0123</p>
+                            <p class="mb-0"><i class="fas fa-envelope me-2"></i> boston@company.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="office-card p-4 rounded-3 shadow-sm bg-white h-100">
+                        <div class="office-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h3>European Office</h3>
+                        <address class="mb-3">
+                            45 Innovation Street<br>
+                            London, EC1A 1BB<br>
+                            United Kingdom
+                        </address>
+                        <div class="office-contact">
+                            <p class="mb-1"><i class="fas fa-phone me-2"></i> +44 20 7946 0958</p>
+                            <p class="mb-0"><i class="fas fa-envelope me-2"></i> london@company.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="office-card p-4 rounded-3 shadow-sm bg-white h-100">
+                        <div class="office-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                        </div>
+                        <h3>APAC Office</h3>
+                        <address class="mb-3">
+                            Level 25, Tower 2<br>
+                            Singapore 038985<br>
+                            Singapore
+                        </address>
+                        <div class="office-contact">
+                            <p class="mb-1"><i class="fas fa-phone me-2"></i> +65 6011 2222</p>
+                            <p class="mb-0"><i class="fas fa-envelope me-2"></i> singapore@company.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section py-5">
+        <div class="container">
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.6659668372095!2d-71.05948692400614!3d42.34987197118651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3708e1c82f2b1%3A0x4e4a9c2b0a0a0a0a!2s123%20Tech%20Park%20Dr%2C%20Boston%2C%20MA%2002110%2C%20USA!5e0!3m2!1sen!2sus!4v1689876543210!5m2!1sen!2sus"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+
+    .contact-image {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    .office-card {
+        transition: transform 0.3s ease;
+    }
+
+        .office-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .office-icon i {
+        transition: transform 0.3s ease;
+    }
+
+    .office-card:hover .office-icon i {
+        transform: scale(1.1);
+    }
+
+    @@media (max-width: 768px) {
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .d-flex {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+</style>

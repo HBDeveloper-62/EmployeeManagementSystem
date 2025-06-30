@@ -1,0 +1,169 @@
+﻿
+
+@model IEnumerable<EmployeeManagementSystem.Models.Salary>
+@{
+    ViewData["Title"] = "Salary Records";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0"><i class="fas fa-money-bill-wave me-2"></i> Salary Records</h3>
+            <div>
+                <a href="~/Employee/AddSalary" class="btn btn-light btn-sm me-2">
+                    <i class="fas fa-plus-circle me-1"></i> Add Salary
+                </a>
+                <a href="~/Employee/EmployeeInfo" class="btn btn-light btn-sm">
+                    <i class="fas fa-arrow-left me-1"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle" id="salaryTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th><i class="fas fa-user me-1"></i> Employee</th>
+                            <th class="text-end"><i class="fas fa-money-bill me-1"></i> Basic</th>
+                            <th class="text-end"><i class="fas fa-plus-circle me-1"></i> Allowance</th>
+                            <th class="text-end"><i class="fas fa-minus-circle me-1"></i> Deductions</th>
+                            <th class="text-end"><i class="fas fa-calculator me-1"></i> Net Salary</th>
+                            <th><i class="fas fa-calendar-alt me-1"></i> Month</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var salary in Model)
+                        {
+                            var netSalary = salary.BasicSalary + salary.Allowance - salary.Deductions;
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        @if (!string.IsNullOrEmpty(salary.Employee?.ImagePath))
+                                        {
+                                            <div style="width: 60px; height: 60px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="me-3">
+                                                <img src="@Url.Content(salary.Employee.ImagePath)"
+                                                     alt="@salary.Employee.FullName"
+                                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center me-3"
+                                                 style="width: 60px; height: 60px;">
+                                                <i class="fas fa-user text-muted"></i>
+                                            </div>
+                                        }
+
+
+                                        
+                                        
+
+                                        <div>
+                                            <div class="fw-bold">@salary.Employee?.FullName</div>
+                                            <small class="text-muted">@salary.Employee?.Position</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-end">@salary.BasicSalary.ToString("C")</td>
+                                <td class="text-end text-success">@salary.Allowance.ToString("C")</td>
+                                <td class="text-end text-danger">@salary.Deductions.ToString("C")</td>
+                                <td class="text-end fw-bold">@netSalary.ToString("C")</td>
+                                <td>@salary.SalaryMonth.ToString("MMMM yyyy")</td>
+                                <td class="text-end">
+                                    <div class="btn-group" role="group">
+                                        <a asp-action="EditSalaries"
+                                           asp-controller="Employee"
+                                           asp-route-id="@salary.Id"
+                                           class="btn btn-sm btn-outline-secondary"
+                                           title="Edit Salary">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="~/Employee/DeleteSalary/@salary.Id" class="btn btn-sm btn-outline-danger" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                        <a href="~/Employee/SalarySlip/@salary.Id" class="btn btn-sm btn-outline-info" title="View Payslip">
+                                            <i class="fas fa-file-invoice"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+            transform: translateY(-1px);
+            transition: all 0.2s ease;
+        }
+
+        .btn-light {
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+            transition: all 0.3s ease;
+        }
+
+            .btn-light:hover {
+                background-color: #e2e6ea;
+                transform: translateY(-2px);
+            }
+
+        .text-success {
+            color: #28a745 !important;
+        }
+
+        .text-danger {
+            color: #dc3545 !important;
+        }
+
+        .fw-bold {
+            color: #212529;
+        }
+
+        .btn-group .btn {
+            border-radius: 4px !important;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#salaryTable').DataTable({
+                responsive: true,
+                dom: '<"top"f>rt<"bottom"lip><"clear">',
+                language: {
+                    search: "",
+                    searchPlaceholder: "Search salaries...",
+                    lengthMenu: "Show _MENU_ entries",
+                    info: "Showing _START_ to _END_ of _TOTAL_ records",
+                    paginate: {
+                        previous: '<i class="fas fa-chevron-left"></i>',
+                        next: '<i class="fas fa-chevron-right"></i>'
+                    }
+                },
+                columnDefs: [
+                    { orderable: false, targets: [6] } // Disable sorting for actions column
+                ]
+            });
+        });
+    </script>
+}

@@ -1,0 +1,134 @@
+﻿@model IEnumerable<EmployeeManagementSystem.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employees";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+          <a href="/Employee/EmployeeInfo" class="btn btn-outline-secondary me-2">
+                <i class="fas fa-arrow-left me-2"></i>Back to Dashboard
+            </a>
+        <h2><i class="fas fa-users me-2"></i> Employee Management</h2>
+        <a href="@Url.Action("Add", "Employee")" class="btn btn-primary">
+            <i class="fas fa-user-plus me-2"></i> Add Employee
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-white">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5 class="mb-0">All Employees</h5>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search employees...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" id="employeeTable">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Photo</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                           
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var emp in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="avatar avatar-md">
+                                        @if (!string.IsNullOrEmpty(emp.ImagePath))
+                                        {
+                                            <div style="width: 60px; height: 60px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="me-3">
+                                                <img src="@Url.Content(emp.ImagePath)"
+                                                     alt="@emp.FullName"
+                                                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+                                            </div>
+                                        }
+
+
+                                        
+                                        else
+                                        {
+                                            <div class="avatar-placeholder rounded-circle bg-light d-flex align-items-center justify-content-center" style="width:40px;height:40px">
+                                                <i class="fas fa-user text-muted"></i>
+                                            </div>
+                                        }
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <strong>@emp.FullName</strong>
+                                        <small class="text-muted">@emp.Email</small>
+                                    </div>
+                                </td>
+                                <td>@emp.Position</td>
+                               
+                                <td>
+                                    <span class="badge bg-success bg-opacity-10 text-success">
+                                        <i class="fas fa-circle me-1" style="font-size:8px"></i> Active
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="d-flex gap-2">
+                                        <a href="@Url.Action("Edit", "Employee", new { id = emp.Id })" class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="@Url.Action("Details", "Employee", new { id = emp.Id })" class="btn btn-sm btn-outline-info">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a href="@Url.Action("Delete", "Employee", new { id = emp.Id })" class="btn btn-sm btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#employeeTable').DataTable({
+                responsive: true,
+                dom: '<"top"f>rt<"bottom"lip><"clear">',
+                language: {
+                    search: "",
+                    searchPlaceholder: "Search employees...",
+                    lengthMenu: "Show _MENU_ entries",
+                    info: "Showing _START_ to _END_ of _TOTAL_ employees",
+                    paginate: {
+                        previous: '<i class="fas fa-chevron-left"></i>',
+                        next: '<i class="fas fa-chevron-right"></i>'
+                    }
+                }
+            });
+
+            // Custom search input
+            $('#searchInput').keyup(function() {
+                $('#employeeTable').DataTable().search($(this).val()).draw();
+            });
+        });
+    </script>
+}

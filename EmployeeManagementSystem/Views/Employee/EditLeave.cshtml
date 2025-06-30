@@ -1,0 +1,209 @@
+﻿@model EmployeeManagementSystem.Models.LeaveRequest
+@{
+    ViewData["Title"] = "Edit Leave";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+<div class="container-fluid">
+    <!-- Success Message Container (Initially Hidden) -->
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+            <i class="fas fa-check-circle me-2"></i>
+            <strong>@TempData["SuccessMessage"]</strong> Redirecting in <span id="countdown">3</span> seconds...
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0"><i class="fas fa-edit me-2"></i> Edit Leave Request</h3>
+            <a href="/Employee/LeaveRequests" class="btn btn-light btn-sm">
+                <i class="fas fa-arrow-left me-1"></i> Back to Leave Requests
+            </a>
+        </div>
+
+        <div class="card-body">
+            <form id="leaveForm" asp-action="EditLeave" method="post" class="row g-3">
+                <input type="hidden" asp-for="Id" />
+
+                <!-- Employee Selection -->
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select asp-for="EmployeeId" asp-items="@(new SelectList(ViewBag.Employees, "Id", "FullName", Model.EmployeeId))" class="form-select">
+                            <option value="">-- Select Employee --</option>
+                        </select>
+                        <label asp-for="EmployeeId">Employee</label>
+                        <span asp-validation-for="EmployeeId" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Leave Type -->
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select asp-for="LeaveType" class="form-select">
+                            <option value="">-- Select Leave Type --</option>
+                            <option value="Sick">Sick Leave</option>
+                            <option value="Annual">Annual Leave</option>
+                            <option value="Casual">Casual Leave</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label asp-for="LeaveType">Leave Type</label>
+                        <span asp-validation-for="LeaveType" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Date Range -->
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="StartDate" type="date" class="form-control" />
+                        <label asp-for="StartDate">Start Date</label>
+                        <span asp-validation-for="StartDate" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="EndDate" type="date" class="form-control" />
+                        <label asp-for="EndDate">End Date</label>
+                        <span asp-validation-for="EndDate" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Reason -->
+                <div class="col-12">
+                    <div class="form-floating">
+                        <textarea asp-for="Reason" class="form-control" style="height: 100px"></textarea>
+                        <label asp-for="Reason">Reason</label>
+                        <span asp-validation-for="Reason" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select asp-for="Status" class="form-select">
+                            <option value="Pending">Pending</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Rejected">Rejected</option>
+                        </select>
+                        <label asp-for="Status">Status</label>
+                        <span asp-validation-for="Status" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="col-12">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                        <a href="/Employee/LeaveRequests" class="btn btn-outline-secondary me-md-2">
+                            <i class="fas fa-times me-1"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-1"></i> Save Changes
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 1.25rem 1.5rem;
+        }
+
+        .form-floating {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control, .form-select {
+            border-radius: 8px;
+            padding: 1rem 1rem;
+            height: calc(3.5rem + 2px);
+        }
+
+        textarea.form-control {
+            height: auto !important;
+            min-height: 100px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            border-color: #86b7fe;
+        }
+
+        .btn {
+            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+            .btn-primary:hover {
+                background-color: #0b5ed7;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+            }
+
+        .btn-outline-secondary {
+            border-width: 2px;
+        }
+
+            .btn-outline-secondary:hover {
+                background-color: #6c757d;
+                color: white;
+            }
+
+        .alert-success {
+            border-left: 5px solid #28a745;
+        }
+    </style>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // Start countdown if success message is shown
+        document.addEventListener('DOMContentLoaded', function() {
+            const successMessage = document.querySelector('.alert-success');
+            if (successMessage) {
+                let seconds = 3;
+                const countdownElement = document.getElementById('countdown');
+                const countdownInterval = setInterval(function() {
+                    seconds--;
+                    countdownElement.textContent = seconds;
+
+                    if (seconds <= 0) {
+                        clearInterval(countdownInterval);
+                        window.location.href = "/Employee/LeaveRequests";
+                    }
+                }, 1000);
+            }
+
+            // Set minimum end date based on start date
+            document.getElementById('StartDate').addEventListener('change', function() {
+                const endDateInput = document.getElementById('EndDate');
+                if (this.value && (!endDateInput.value || new Date(endDateInput.value) < new Date(this.value))) {
+                    endDateInput.value = this.value;
+                }
+                endDateInput.min = this.value;
+            });
+        });
+    </script>
+}
